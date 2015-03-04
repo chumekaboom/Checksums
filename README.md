@@ -8,6 +8,7 @@ Installation
 ------------
 
 - Copy the checksums folder in the app directory of owncloud.
+- The application needs the following folder structure \owncloud\app\checksums\ajax etc.
 - Enable this app in the admin interface.
 
 
