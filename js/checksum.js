@@ -3,7 +3,7 @@
     init: function() {
       if (typeof FileActions !== 'undefined') {
         FileActions.register(
-          'all',
+          'file',
           t('checksum','checksum'),
           OC.PERMISSION_READ,
           OC.imagePath('core','actions/info'),
@@ -21,7 +21,7 @@
         alert(dom.html());
       }
     },
-    load: 'Creating SHA1 Checksum <img src="'+OC.imagePath('core','loading.gif')+'">',
+    load: 'Creating SHA1 checksum <img src="'+OC.imagePath('core','loading.gif')+'">',
     ajax: function(file) {
       var data = {source: file, dir: $('#dir').val()+'/'};
       $.ajax({

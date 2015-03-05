@@ -3,8 +3,8 @@
     init: function() {
       if (typeof FileActions !== 'undefined') {
         FileActions.register(
-          'all',
-          t('checksum_md5','md5'),
+          'file',
+          t('checksum_md5','MD5'),
           OC.PERMISSION_READ,
           OC.imagePath('core','actions/info'),
           checksum_md5.check
@@ -21,7 +21,7 @@
         alert(dommd5.html());
       }
     },
-    load: 'Creating md5 checksum <img src="'+OC.imagePath('core','loading.gif')+'">',
+    load: 'Creating MD5 checksum <img src="'+OC.imagePath('core','loading.gif')+'">',
     ajax: function(file) {
       var datamd5 = {source: file, dir: $('#dir').val()+'/'};
       $.ajax({
@@ -32,7 +32,7 @@
       async: false,
       success: function(info) {
         dommd5 = $('.checksum_md5-hashing').first();
-        dommd5.text('md5: '+info.datamd5[0]);
+        dommd5.text('MD5: '+info.datamd5[0]);
         dommd5.addClass('chcksummd5-hashed');
         dommd5.removeClass('checksum_md5-hashing');
       }
